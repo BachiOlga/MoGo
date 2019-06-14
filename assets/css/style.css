@@ -263,6 +263,16 @@ h6 {
     width: 380px;
 }
 
+
+
+
+
+.about__item:hover .about__img img {
+    transform: translate3d(-10px, -10px,
+            0)
+}
+
+
 .about__item:hover .about__img img {
     opacity: .1;
 }
@@ -270,6 +280,7 @@ h6 {
 .about__img {
     background: linear-gradient(to bottom,
             #f38181, #fce38a);
+    transition: transform 1s linear;
 }
 
 .about__img img {

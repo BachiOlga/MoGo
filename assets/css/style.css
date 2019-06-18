@@ -20,7 +20,8 @@ h5,
 h6 {
     margin: 0;
 }
-hr{
+
+hr {
     display: block;
     width: 100%;
     height: 1px;
@@ -28,6 +29,7 @@ hr{
     background-color: #e5e5e5;
     margin: 40px 0;
 }
+
 /* Container */
 .container {
     width: 100%;
@@ -224,6 +226,11 @@ hr{
     padding: 80px 0;
 }
 
+.section--divices {
+    background: url(../images/divicesbg.png)center no-repeat;
+    background-size: cover;
+}
+
 .section__header {
     width: 100%;
     margin: 0 auto 50px;
@@ -359,18 +366,21 @@ hr{
 
     display: flex;
 }
+
 .services__item {
     flex: 1 1 0;
     padding-left: 85px;
     padding-right: 35px;
     position: relative;
 }
+
 .services__icon {
     position: absolute;
     top: 3px;
     left: 28px;
     z-index: 1;
 }
+
 .services__title {
     text-transform: uppercase;
     font-size: 14px;
@@ -378,7 +388,30 @@ hr{
     margin-bottom: 10px;
 
 }
+
 .services__text {
     font-size: 15px;
     color: #999;
 }
+
+/* Divices */
+
+.divices__img {
+    width: 470px;
+    height: 580px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* /Divices */

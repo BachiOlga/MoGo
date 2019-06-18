@@ -227,6 +227,7 @@ hr {
 }
 
 .section--divices {
+    padding-bottom: 0;
     background: url(../images/divicesbg.png)center no-repeat;
     background-size: cover;
 }
@@ -395,23 +396,22 @@ hr {
 }
 
 /* Divices */
-
-.divices__img {
-    width: 470px;
-    height: 580px;
+.divices {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
 }
 
+.divices__item {
+    display: block;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+.divices__item--iphone {
+    position: absolute;
+    bottom: -80px;
+    right: 0;
+    z-index: 1;
+}
 
 /* /Divices */

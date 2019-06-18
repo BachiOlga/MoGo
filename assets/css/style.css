@@ -227,6 +227,7 @@ hr {
 }
 
 .section--divices {
+    margin-bottom: 40px;
     padding-bottom: 0;
     background: url(../images/divicesbg.png)center no-repeat;
     background-size: cover;
@@ -415,3 +416,10 @@ hr {
 }
 
 /* /Divices */
+/* We do */
+.wedo {
+    display: flex;
+}
+.wedo__item {
+    width: 50%;
+}

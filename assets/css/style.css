@@ -282,21 +282,25 @@ hr {
 
 .card__item {
     width: 380px;
-    position: relative;
+    
+    
+}
+.card__inner {
     background-color: #95e1d3;
+    position: relative;
 }
 
-.card__item:hover .card__text {
+.card__inner:hover .card__text {
     opacity: 1;
 
 }
 
-.card__item:hover .card__img {
+.card__inner:hover .card__img {
     transform: translate3d(-10px, -10px,
             0)
 }
 
-.card__item:hover .card__img img {
+.card__inner:hover .card__img img {
     opacity: .1;
 }
 
@@ -325,6 +329,22 @@ hr {
     transform: translate3d(0, -50, 0);
     opacity: 0;
     transition: opaciti .2s linear;
+}
+.card__info {
+    margin-top: 20px;
+    text-align: center;
+}
+.card__name {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+    text-transform: uppercase;
+}
+.card__prof {
+    color: #999;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 300;
 }
 
 /* /Card */

@@ -83,7 +83,7 @@ hr {
     display: block;
     width: 60px;
     height: 3px;
-    margin: 60px auto;
+    margin: 40px auto;
     background-color: #fff;
 }
 
@@ -190,7 +190,7 @@ hr {
 
 .slider__item {
     width: 23%;
-    padding: 20px 0;
+    padding: 10px 0;
     position: relative;
     border-top: 3px solid #fff;
     opacity: .7;
@@ -233,7 +233,7 @@ hr {
     background-size: cover;
 }
 
-.section--grey {
+.section--gray {
     background-color: #f8f8f8;
 }
 
@@ -282,9 +282,10 @@ hr {
 
 .card__item {
     width: 380px;
-    
-    
+
+
 }
+
 .card__inner {
     background-color: #95e1d3;
     position: relative;
@@ -330,16 +331,19 @@ hr {
     opacity: 0;
     transition: opaciti .2s linear;
 }
+
 .card__info {
     margin-top: 20px;
     text-align: center;
 }
+
 .card__name {
     margin-bottom: 5px;
     font-size: 14px;
     color: #333;
     text-transform: uppercase;
 }
+
 .card__prof {
     color: #999;
     font-size: 15px;
@@ -584,3 +588,10 @@ hr {
 }
 
 /* /Social */
+/* Logos */
+.logos {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ?Logos */

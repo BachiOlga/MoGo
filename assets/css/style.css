@@ -622,6 +622,8 @@ hr {
 }
 
 .works__image {
+    max-width: 100%;
+    height: auto;
     display: block;
     transition: opacity .2s linear;
 }

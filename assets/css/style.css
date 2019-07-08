@@ -592,6 +592,15 @@ hr {
 .logos {
     display: flex;
     justify-content: space-between;
+align-items: center;
 }
 
 /* ?Logos */
+/* Works */
+.works {
+    display: flex;
+}
+.works__col {
+    flex: 1 1 0;
+}
+/*/Works */

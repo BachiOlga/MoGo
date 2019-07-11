@@ -957,9 +957,11 @@ hr {
 }
 
 .blogs__title {
+    display: block;
+    margin-bottom: 5px;
     color: #333;
     font-size: 12px;
-    line-height: 1.2;
+    line-height: 1.5;
     text-transform: uppercase;
     text-decoration: none;
 }
@@ -977,6 +979,24 @@ hr {
 
 /* /Footer */
 
+/* Instagram */
+.instagram {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.instagram__item {
+    width: 32.33333%;
+
+    border-bottom: 1px solid #fff;
+}
+
+.instagram__item img {
+    display: block;
+}
+
+/* /Instagram */
 /* Subscribe  */
 .subscribe {
     width: 100%;
@@ -1033,3 +1053,17 @@ hr {
 }
 
 /*/Subscribe  */
+/* Copyright */
+.copyright {
+    padding-top: 20px 0;
+    border-top: 1px solid #e5e5e5;
+    text-align: center;
+    color: #333;
+    font-size: 14px;
+}
+
+.copyright span {
+    color: #f38181;
+}
+
+/* /Copyright */

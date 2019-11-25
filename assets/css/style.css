@@ -115,11 +115,10 @@ hr {
     left: 0;
     right: 0;
     z-index: 1000;
-    padding-top: 30px;
+    padding-top: 10px;
 }
 
-.header--fixed {
-    padding: 10px 0;
+.header.fixed {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     background: #eb8b8d;
     position: fixed;
@@ -127,6 +126,10 @@ hr {
     right: 0;
     left: 0;
     transform: translate3d(0, 0, 0)
+}
+
+.header.active {
+    background: #eb8b8d;
 }
 
 .header__logo {
@@ -141,7 +144,8 @@ hr {
 .nav {
     text-transform: uppercase;
     font-size: 14px;
-   
+
+
 }
 
 .nav__link {
@@ -183,6 +187,7 @@ hr {
 .nav-toggle {
     width: 30px;
     position: absolute;
+    display: none;
     top: 24px;
     right: 24px;
     z-index: 1;
@@ -193,7 +198,7 @@ hr {
     border: 0;
     background: none;
     cursor: pointer;
-    
+
 }
 
 .nav-toggle__item {
@@ -208,7 +213,12 @@ hr {
     left: 0;
     bottom: 0;
     margin: auto;
+    transition: background .2s linear;
 
+}
+
+.nav-toggle.active .nav-toggle__item {
+    background: none;
 }
 
 .nav-toggle__item::before,
@@ -220,6 +230,17 @@ hr {
     position: absolute;
     left: 0;
     z-index: 1;
+    transition: transform .2s linear;
+}
+
+.nav-toggle.active .nav-toggle__item::before {
+    transform-origin: left top;
+    transform: rotate(45deg) translate3d(0px, -2px, 0);
+}
+
+.nav-toggle.active .nav-toggle__item::after {
+    transform-origin: left bottom;
+    transform: rotate(-45deg) translate3d(0px, 3px, 0);
 }
 
 .nav-toggle__item::before {
@@ -1297,131 +1318,147 @@ hr {
     }
 
     /* Intro */
+
     /* Header */
     .header {
-        padding-top: 10px;
+        padding: 10px 0;
     }
 
     /* /Header */
-}
 
-/* Nav */
- .nav {
-    display: none;
-} 
-.nav-toggle {
-    display: block;
-}
-/* Section */
-.section {
-    padding: 40px 0;
-}
 
-.section--divices {
-    padding-bottom: 0;
-}
+    /* Nav */
+    .nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #eb8b8d;
+        width: 100%;
+    }
 
-/* Card */
-.card {
-    margin-top: 50px;
-    justify-content: center;
+    .nav__link {
+        display: block;
+        margin: 0;
+        padding: 8px 20px;
+    }
 
-}
+    .nav-toggle {
+        display: block;
 
-.card__item {
-    width: 100%;
-    max-width: 410px;
-    margin-bottom: 30px;
-}
 
-.card__item:last-child {
-    margin-bottom: 0;
-}
+    }
 
-/* Services */
-.services {
-    justify-content: center;
-}
+    /* Section */
+    .section {
+        padding: 40px 0;
+    }
 
-.services__item {
-    width: 100%;
-    max-width: 400px;
-    padding-left: 55px;
-    padding-right: 0;
-}
+    .section--divices {
+        padding-bottom: 0;
+    }
 
-.services__icon {
-    left: 10px;
-}
+    /* Card */
+    .card {
+        margin-top: 50px;
+        justify-content: center;
 
-/* Slider */
-.slider__text {
-    display: none;
-}
+    }
 
-.slider__item.active:before {
-    width: 50%;
-    padding-bottom: 0;
-}
+    .card__item {
+        width: 100%;
+        max-width: 410px;
+        margin-bottom: 30px;
+    }
 
-/* Wedo */
-.wedo__img {
-    display: none;
-}
+    .card__item:last-child {
+        margin-bottom: 0;
+    }
 
-.wedo__item {
-    width: 100%;
-}
+    /* Services */
+    .services {
+        justify-content: center;
+    }
 
-/* Reviews */
-.reviews__photo {
-    position: static;
-    margin: 0 auto 20px;
-}
+    .services__item {
+        width: 100%;
+        max-width: 400px;
+        padding-left: 55px;
+        padding-right: 0;
+    }
 
-.reviews__item {
-    padding-left: 0;
-}
+    .services__icon {
+        left: 10px;
+    }
 
-.reviews__text {
-    font-size: 16px;
-}
+    /* Slider */
+    .slider__text {
+        display: none;
+    }
 
-.reviews__author {
-    font-size: 20px;
-}
+    .slider__item.active:before {
+        width: 50%;
+        padding-bottom: 0;
+    }
 
-/* Works */
-.works {
-    flex-wrap: wrap;
-}
+    /* Wedo */
+    .wedo__img {
+        display: none;
+    }
 
-.works__col {
-    flex: none;
-    width: 50%;
-}
+    .wedo__item {
+        width: 100%;
+    }
 
-/* Blog */
-.blog {
-    max-width: 380px;
-    margin: 0 auto;
-}
+    /* Reviews */
+    .reviews__photo {
+        position: static;
+        margin: 0 auto 20px;
+    }
 
-.blog__item {
-    width: 100%;
-    margin-bottom: 30px;
-}
+    .reviews__item {
+        padding-left: 0;
+    }
 
-.blog__item:last-child {
-    margin-bottom: 0;
-}
+    .reviews__text {
+        font-size: 16px;
+    }
 
-/* Footer */
+    .reviews__author {
+        font-size: 20px;
+    }
 
-.footer__coll--second,
-.footer__coll--third {
-    width: 100%;
-}
+    /* Works */
+    .works {
+        flex-wrap: wrap;
+    }
+
+    .works__col {
+        flex: none;
+        width: 50%;
+    }
+
+    /* Blog */
+    .blog {
+        max-width: 380px;
+        margin: 0 auto;
+    }
+
+    .blog__item {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .blog__item:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Footer */
+
+    .footer__coll--second,
+    .footer__coll--third {
+        width: 100%;
+    }
 }
 
 
